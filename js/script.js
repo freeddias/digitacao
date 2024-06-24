@@ -261817,7 +261817,7 @@ let randomWord;
 let score = 0;
 
 // Init time
-let time = 10;
+let time = 90;
 
 // Set difficulty
 let difficulty = "god";
@@ -261901,16 +261901,6 @@ text.addEventListener("input", (e) => {
     console.log(localStorage.getItem("difficulty"));
     console.log(difficulty);
     e.target.value = "";
-
-    if (difficulty === "hard") {
-      time += 5;
-    } else if (difficulty === "medium") {
-      time += 10;
-    } else if (difficulty === "easy"){
-      time += 15;
-    } else if(difficulty === "god")
-        time += 3;
-
     updateTime();
   }
 });
