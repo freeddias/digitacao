@@ -63684,5 +63684,5 @@ settingBtn.addEventListener("click", () => settings.classList.toggle("hide"));//
 difficultySelect.addEventListener("change", (e) => {
   difficulty = e.target.value;
   console.log(difficulty);
-  localStorage.setItem("medium", difficulty);
+  localStorage.setItem("difficulty", difficulty);
 });
