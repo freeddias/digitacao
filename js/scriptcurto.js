@@ -63609,7 +63609,7 @@ const words = [
 ];// Init word
 let randomWord;// Init score
 let score = 0;// Init time
-let time = 10;// Set difficulty
+let time = 90;// Set difficulty
 let difficulty = "god";
 // focus on text on start
 text.focus();// count down
@@ -63669,13 +63669,6 @@ text.addEventListener("input", (e) => {
     addWordToDOM();
     updateScore();
     e.target.value = "";
-    time += 10;
     updateTime();
   }
 });// Settings btn
-settingBtn.addEventListener("click", () => settings.classList.toggle("hide"));// setting select
-difficultySelect.addEventListener("change", (e) => {
-  difficulty = e.target.value;
-  console.log(difficulty);
-  localStorage.setItem("medium", difficulty);
-});
