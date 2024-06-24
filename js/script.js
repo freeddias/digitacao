@@ -261869,11 +261869,32 @@ function updateTime() {
 
 // show Game over
 function gameOver() {
-  endGameElement.innerHTML = `
+  if(score < 50){
+    endGameElement.innerHTML = `
   <h1>Fim do Tempo</h1>
   <p>Sua pontuação final é: ${score}</p>
   <button onclick="location.reload()" style="
   background: #004A8D; color: #fff;">Recomeçar</button>
+  <h1>Dá pra melhorar hein?</h1>
+    `;
+  }
+  else
+    if(score < 100){
+    endGameElement.innerHTML = `
+  <h1>Fim do Tempo</h1>
+  <p>Sua pontuação final é: ${score}</p>
+  <button onclick="location.reload()" style="
+  background: #004A8D; color: #fff;">Recomeçar</button>
+  <h1>Tá quase bom!</h1>
+    `;
+  }
+  else
+      endGameElement.innerHTML = `
+  <h1>Fim do Tempo</h1>
+  <p>Sua pontuação final é: ${score}</p>
+  <button onclick="location.reload()" style="
+  background: #004A8D; color: #fff;">Recomeçar</button>
+  <h1>Que tal subir o nível hein?</h1>
     `;
 
   endGameElement.style.display = "flex";
@@ -261892,11 +261913,11 @@ text.addEventListener("input", (e) => {
     e.target.value = "";
 
     if (difficulty === "hard") {
-      time += 2;
-    } else if (difficulty === "medium") {
-      time += 3;
-    } else {
       time += 5;
+    } else if (difficulty === "medium") {
+      time += 10;
+    } else {
+      time += 15;
     }
 
     updateTime();
