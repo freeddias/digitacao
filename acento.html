@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Jogo da Digitação</title>
+
+</head>
+
+<body>
+
+
+    <div class="container">
+        <h2>👩‍💻Jogo de Digitação 👨‍💻</h2>
+        <small>Digite a palavra:</small>
+
+        <h1 id="word"></h1>
+
+        <input type="text" id="text" autocomplete="off" placeholder="Digite aqui sua palavra" />
+
+        <p class="time-container">Tempo Restante: <span id="time">10s</span></p>
+
+        <p class="score-container">Pontuação: <span id="score">0</span></p>
+
+        <div id="end-game-container" class="end-game-container"></div>
+    </div>
+
+    <div id="settings" class="settings">
+        <form id="settings-form">
+            <div>
+                <label for="difficulty">Dificuldade</label>
+                <select id="difficulty">
+                    <option value="easy">Fácil</option>
+                    <option value="medium">Médio</option>
+                    <option value="hard">Difícil</option>
+                    <option value="god">Deus</option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <!-- custom js -->
+    <script src="js/scriptcurto.js"></script>
+</body>
+
+</html>
