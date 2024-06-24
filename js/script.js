@@ -261916,9 +261916,10 @@ text.addEventListener("input", (e) => {
       time += 5;
     } else if (difficulty === "medium") {
       time += 10;
-    } else {
+    } else if (difficulty === "easy"){
       time += 15;
-    }
+    } else
+    time += 3;
 
     updateTime();
   }
