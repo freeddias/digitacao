@@ -63668,21 +63668,14 @@ text.addEventListener("input", (e) => {
   const insertedText = e.target.value;  if (insertedText === randomWord) {
     addWordToDOM();
     updateScore();
-    console.log(localStorage.getItem("difficulty"));
-    console.log(difficulty);
-    e.target.value = "";    if (difficulty === "hard") {
-      time += 5;
-    } else if (difficulty === "medium") {
-      time += 10;
-    } else if (difficulty === "easy"){
-      time += 15;
-    } else if(difficulty === "god")
-        time += 3;    updateTime();
+    e.target.value = "";
+    time += 10;
+    updateTime();
   }
 });// Settings btn
 settingBtn.addEventListener("click", () => settings.classList.toggle("hide"));// setting select
 difficultySelect.addEventListener("change", (e) => {
   difficulty = e.target.value;
   console.log(difficulty);
-  localStorage.setItem("difficulty", difficulty);
+  localStorage.setItem("medium", difficulty);
 });
