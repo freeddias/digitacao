@@ -20,7 +20,7 @@ let randomWord;
 let score = 0;
 
 // Init time
-let time = 90;
+let time = 60;
 
 // Set difficulty
 let difficulty = "god";
