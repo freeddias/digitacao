@@ -10,7 +10,7 @@ const difficultySelect = document.getElementById("difficulty");
 
 // list of words for game
 const words = [
-"araraquara","o"
+"araraquara"
 ];
 
 // Init word
