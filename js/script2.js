@@ -10,7 +10,7 @@ const difficultySelect = document.getElementById("difficulty");
 
 // list of words for game
 const words = [
-"a","o"
+"araraquara","o"
 ];
 
 // Init word
@@ -20,7 +20,7 @@ let randomWord;
 let score = 0;
 
 // Init time
-let time = 60;
+let time = 90;
 
 // Set difficulty
 let difficulty = "god";
@@ -86,7 +86,7 @@ function gameOver() {
   <p>Sua pontuação final é: ${score}</p>
   <button onclick="location.reload()" style="
   background: #004A8D; color: #fff;">Recomeçar</button>
-  <h1>Que tal subir o nível hein?</h1>
+  <h1>Excelente!</h1>
     `;
   localStorage.setItem("difficulty", difficulty);
   endGameElement.style.display = "flex";
